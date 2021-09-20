@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.jpacrud.dao.TeamDAO;
 import com.skilldistillery.jpacrud.entities.Team;
@@ -23,6 +24,9 @@ public class TeamController {
 		model.addAttribute("teams", teams);
 		return "home";
 	}
+	
+	
+	
 	@RequestMapping(path = "getTeam.do", method = RequestMethod.GET)
 	public String getTeam(Integer teamID, Model model) {
 		model.addAttribute("team", dao.findByID(teamID));
@@ -34,10 +38,19 @@ public class TeamController {
 		model.addAttribute("team", dao.findByID(teamID));
 		dao.deleteTeam(teamID);
 		return "team/deleteTeam";
-		
-		
 	}
 	
-	
-	
+	@RequestMapping(path = "addTeam.do", method= RequestMethod.POST)
+	public ModelAndView addTeam(Team team) {
+		ModelAndView mv = new ModelAndView();
+		dao.addTeam(team);
+		mv.addObject("team", team);
+		mv.setViewName("team/getTeam");
+		return mv;
+	}
 }
+	
+		
+	
+	
+	

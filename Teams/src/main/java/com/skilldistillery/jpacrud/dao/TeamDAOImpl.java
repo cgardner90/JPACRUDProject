@@ -42,6 +42,13 @@ public class TeamDAOImpl implements TeamDAO {
 		return complete;
 		
 		}
+
+	@Override
+	public Team addTeam(Team team) {
+		em.persist(team);
+		em.flush();
+		return team;
+	}
 	}
 
 

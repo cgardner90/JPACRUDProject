@@ -28,23 +28,17 @@
 <c:forEach var="team" items="${teams}">
 <tr>
 <td>${team.location }</td>
-<td><a href="getTeam.do?teamID=${team.id }">${team.name }</td>
+<td><a href="getTeam.do?teamID=${team.id }">${team.name }</a></td>
 <td>${team.conference }</td>
 <td>${team.division }</td>
-<td>${team.numberOfSb }</td>
+<td>           ${team.numberOfSb }</td>
 <td>${team.lastSb }</td>
 <td>${team.lastPlayoff }</td>
 <td>${team.headCoach }</td>
 </tr>
 </c:forEach>
-</body>
-</html>
-
-
-
-
-
-
-
+</table>
+<h4> To input a New Team, follow this link:</h4>
+<a href="testHTML.html">Click Here</a>
 </body>
 </html>

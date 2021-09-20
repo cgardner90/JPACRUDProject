@@ -10,6 +10,8 @@ public interface TeamDAO {
 	Team findByID(int teamID);
 	List<Team> findAll();
 	boolean deleteTeam(int teamID);
+	Team addTeam(Team team);
+	
 	
 	
 	

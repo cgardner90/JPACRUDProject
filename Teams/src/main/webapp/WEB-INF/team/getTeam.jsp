@@ -17,6 +17,21 @@ To Delete this team, enter the team id here:
 		Film ID: <input type="text" name="teamID" /> <input type="submit"
 			value="Delete Team" />
 	</form>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+<a href = "home.do">Return to HomePage</a>
+
+
+
 </body>
 
 </html>

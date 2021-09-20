@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>${team.name } has been deleted from the database.</h1>
+<a href = "home">Return to HomePage</a>
 </body>
 </html>
