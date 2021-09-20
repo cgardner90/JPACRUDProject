@@ -2,6 +2,10 @@
 This app allows a user to search within and manipulate the data of a database consisting of the 32 NFL teams.
 ###Description
 Through this app, a user will be able to Create, Read, Update, and Delete data of teams within the database, allowing for research to be conducted, and changes to be updated in real time as they occur (i.e a team changes it's name or Head Coach).
+The app can be found hosted on an ec2 instance at:
+
+3.15.64.207:8080/Teams
+
 ###Technologies Used
 * Spring Boot MVC
 * JPA
