@@ -11,6 +11,8 @@ public interface TeamDAO {
 	List<Team> findAll();
 	boolean deleteTeam(int teamID);
 	Team addTeam(Team team);
+	void updateTeam(Team team, int id);
+	
 	
 	
 	

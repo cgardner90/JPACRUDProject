@@ -48,6 +48,16 @@ public class TeamController {
 		mv.setViewName("team/getTeam");
 		return mv;
 	}
+	@RequestMapping(path = "update.do", method = RequestMethod.POST)
+	public ModelAndView updateTeam(Team team) {
+		
+		ModelAndView mv = new ModelAndView();
+		mv.addObject(team);
+		dao.updateTeam(team, team.getId());
+		mv.setViewName("team/getTeam");
+		return mv;
+		
+	}
 }
 	
 		
